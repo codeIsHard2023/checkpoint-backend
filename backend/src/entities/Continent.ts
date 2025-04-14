@@ -19,7 +19,7 @@ export class Continent extends BaseEntity {
   @Field(() => [Country])
   countries!: Country[];
 
-  @Column()
+  @Column({unique: true})
   @Field(() => String)
   name!: string;
   

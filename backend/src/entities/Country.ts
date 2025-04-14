@@ -25,11 +25,11 @@ export class Country extends BaseEntity {
   @Field(() => String)
   iso!: string;
 
-  @Column()
+  @Column({unique: true})
   @Field(() => String, )
   name!: string;
 
-  @Column()
+  @Column({unique: true})
   @Field()
   emoji!: string;
 }
